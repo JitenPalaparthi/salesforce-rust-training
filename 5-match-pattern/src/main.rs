@@ -92,7 +92,15 @@ fn main() {
 
     // write if let on shape
 
+    let d1 = Direction::South;
 
+    if let Direction::East=d1{
+        println!("It is direction of east");
+    }else if let Direction::West=d1{
+        println!("It is direction of west");    
+    }else{
+        println!("It is direction of south or north :)")
+    }
 }
 
 enum Direction {
