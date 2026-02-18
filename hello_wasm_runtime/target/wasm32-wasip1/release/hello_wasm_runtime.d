@@ -1,0 +1,1 @@
+/Users/jiten/workspace/training/salesforce-rust-lang/hello_wasm_runtime/target/wasm32-wasip1/release/hello_wasm_runtime.wasm: /Users/jiten/workspace/training/salesforce-rust-lang/hello_wasm_runtime/src/main.rs

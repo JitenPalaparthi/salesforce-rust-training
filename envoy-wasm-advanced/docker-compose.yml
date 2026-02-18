@@ -1,0 +1,25 @@
+
+services:
+  upstream:
+    image: hashicorp/http-echo:1.0
+    command: ["-listen=:5678", "-text=hello from upstream\n"]
+    ports:
+      - "5678:5678"
+
+  auth:
+    build: ./auth
+    ports:
+      - "8080:8080"
+
+  envoy:
+    image: envoyproxy/envoy:v1.36-latest
+    volumes:
+      - ./envoy/envoy.yaml:/etc/envoy/envoy.yaml:ro
+      - ./envoy/auth_filter.wasm:/etc/envoy/wasm/auth_filter.wasm:ro
+    ports:
+      - "10000:10000"
+      - "9901:9901"
+    command: ["-c", "/etc/envoy/envoy.yaml", "--log-level", "info"]
+    depends_on:
+      - upstream
+      - auth

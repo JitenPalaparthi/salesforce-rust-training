@@ -1,0 +1,1 @@
+/Users/jiten/workspace/training/salesforce-rust-lang/envoy-wasm-advanced/wasm-auth-filter/target/wasm32-wasip1/release/wasm_auth_filter.wasm: /Users/jiten/workspace/training/salesforce-rust-lang/envoy-wasm-advanced/wasm-auth-filter/src/lib.rs

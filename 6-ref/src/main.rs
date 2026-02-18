@@ -25,7 +25,7 @@ println!("{}",hash);
 
 let index = hash & capacity-1;
 
-let index2 = hash%capacity;
+let index2 = hash%capacity; // % is an arthimetic operations
 
 println!("{}--{}",index,index2);
 
